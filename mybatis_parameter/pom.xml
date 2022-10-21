@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mybatis_gogogo</artifactId>
+    <artifactId>mybatis_parameter</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

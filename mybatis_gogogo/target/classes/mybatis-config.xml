@@ -51,8 +51,7 @@ plugins?,environments?,databaseIdProvider?,mappers?)-->
     <!--引入映射文件-->
     <mappers>
 <!--        <mapper resource="mappers/UserMapper.xml"/>-->
-<!--        mapper接口和映射文件路径名一样-->
-<!--        文件名字也需一致-->
+<!--        -->
         <package name="Mapper"/>
     </mappers>
 </configuration>

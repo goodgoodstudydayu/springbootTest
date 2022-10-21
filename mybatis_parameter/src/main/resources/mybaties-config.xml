@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-        <!DOCTYPE configuration
-                PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
-                "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-<!--    标签顺序-->
-<!--    (properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,reflectorFactory?,
+    <!--    标签顺序-->
+    <!--    (properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,reflectorFactory?,
 plugins?,environments?,databaseIdProvider?,mappers?)-->
 
-<!--    可以使用${key}-->
-    <properties resource="jdbc.properties" />
+    <!--    可以使用-->
+    <properties resource="jdbc.properties"/>
     <typeAliases>
-<!--        不设置alias，当前类型拥有默认的别名为类名，不区分大小写-->
-<!--        <typeAlias type="pojo.User" alias="User"></typeAlias>-->
-<!--        指定包下所有类都有默认别名-->
+        <!--        不设置alias，当前类型拥有默认的别名为类名，不区分大小写-->
+        <!--        <typeAlias type="pojo.User" alias="User"></typeAlias>-->
+        <!--        指定包下所有类都有默认别名-->
         <package name="pojo"/>
     </typeAliases>
     <!--设置连接数据库的环境-->
-<!--    default:设置默认使用环境的id(唯一标识不能重复)-->
+    <!--    default:设置默认使用环境的id(唯一标识不能重复)-->
     <environments default="development">
         <environment id="development">
-<!--            设置事务管理器
+            <!--            设置事务管理器
                 type="JDBC/MANAGED"
                 jdbc: 表示使用JDBC中原生的事务管理方式
-                MANAGED:被管理，例如spring-->
+                MANAGED:被管理, 例如spring-->
             <transactionManager type="JDBC"/>
-<!--            设置数据源
+            <!--            设置数据源
                 type:设置数据源的类型
                 type="POOLED/UNPOOLED/JNDI"
                 POOLED:表示使用数据库连接池
@@ -50,9 +50,9 @@ plugins?,environments?,databaseIdProvider?,mappers?)-->
     </environments>
     <!--引入映射文件-->
     <mappers>
-<!--        <mapper resource="mappers/UserMapper.xml"/>-->
-<!--        mapper接口和映射文件路径名一样-->
-<!--        文件名字也需一致-->
-        <package name="Mapper"/>
+        <!--        <mapper resource="mappers/UserMapper.xml"/>-->
+        <!--        mapper接口和映射文件路径名一样-->
+        <!--        文件名字也需一致-->
+        <package name="mapper"/>
     </mappers>
 </configuration>
