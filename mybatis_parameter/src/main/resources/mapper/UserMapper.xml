@@ -8,7 +8,22 @@
     <!--    mapper接口中的全类名和映射文件的namespace一致-->
     <!--    mapper接口中的方法名跟id一致-->
 <select id="getUserByUsername" resultType="User">
-<!--    select * from t_user where username = '${}'-->
-    select * from t_user where username = #{username}
+    select * from t_user where username = '${username}'
+<!--    select * from t_user where username = #{username}-->
 </select>
+    <select id="checkLogin" resultType="User">
+        select * from t_user where username = #{param1} and password = #{param2}
+    </select>
+
+    <select id="checkLoginByMap" resultType="User">
+        select * from t_user where username = #{username} and password = #{password}
+    </select>
+
+    <insert id="insertUser">
+        insert into t_user values(null,#{username},#{password},#{age},#{gender},#{email})
+    </insert>
+
+    <select id="checkLoginByParam" resultType="User">
+        select * from t_user where username = #{username} and password = #{password}
+    </select>
 </mapper>
